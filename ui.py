@@ -2,7 +2,7 @@
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
                              QMessageBox, QPlainTextEdit, QHBoxLayout,
                              QLineEdit, QComboBox, QLabel)
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QFont
 from PyQt5 import QtCore
 
 
@@ -14,6 +14,8 @@ class View(QWidget):
 
     def initUI(self):
         self.lbl1 = QLabel('v.2.3.0', self)
+        self.lbl1.setFont(QFont('Consolas', 10))
+
         self.le1 = QLineEdit('0', self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
         self.le1.setFocus(True)
